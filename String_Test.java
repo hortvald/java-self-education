@@ -103,5 +103,62 @@ class String_Test
             + "string ('%s') and integer variable (%d).";
     System.out.println(String.format(srt11format, 2.3, "qwerty", 10));
     System.out.println();
+    
+    System.out.println("Point 12");
+    String hello = "Hello";
+    String world = "world!";
+    String delimiter = ", ";
+    System.out.println(String.join(delimiter, hello, world));
+    System.out.println();
+    
+    System.out.println("Point 13");
+    int integerVariable = 10;
+    String first = integerVariable + ""; // конкатенация с пустой строкой
+    String second = String.valueOf(integerVariable);
+    String third = Integer.toString(integerVariable);
+    System.out.println(first + " " + second + " " + third);
+    System.out.println();
+    
+    System.out.println("Point 14");
+    String strNUM = "10";
+    int first1 = Integer.parseInt(strNUM); 
+    int second1 = Integer.valueOf(strNUM);
+    System.out.println(first1 + " " + second1);
+    System.out.println();
+    
+    System.out.println("Point 15");
+    StringBuffer firstBuffer = new StringBuffer(); // capacity = 16
+    StringBuffer secondBuffer = new StringBuffer("abcdef"); // capacity = str.length() + 16
+    StringBuffer thirdBuffer = new StringBuffer(secondBuffer); // параметр - любой класс, что реализует CharSequence
+    //StringBuffer fourthBuffer = new StringBuffer(50); // передать capacity
+    
+    firstBuffer.append("sirius");
+    String strB1 = new String(firstBuffer);
+    System.out.println(strB1);
+    String strB2 = new String(secondBuffer);
+    System.out.println(strB2);
+    String strB3 = new String(thirdBuffer);
+    System.out.println(strB3);
+    System.out.println();
+    
+    System.out.println("Point 16");
+    StringBuilder firstBuilder = new StringBuilder();
+    StringBuilder secondBuilder = new StringBuilder("qwerty");
+    StringBuilder thirdBuilder = new StringBuilder(secondBuilder);
+    
+    firstBuilder.append("antares");
+    String strBB1 = new String(firstBuilder);
+    System.out.println(strBB1);
+    String strBB2 = new String(secondBuilder);
+    System.out.println(strBB2);
+    String strBB3 = new String(thirdBuilder);
+    System.out.println(strBB3);
+    System.out.println();
+    
+    
+    /*StringBuilder работает намного быстрее, но StrigBuffer подходитдля
+    многопоточного программирования
+    */
+    
 }
 }
