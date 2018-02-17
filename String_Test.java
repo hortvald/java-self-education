@@ -160,5 +160,58 @@ class String_Test
     многопоточного программирования
     */
     
+    System.out.println("Point 16");
+    String str11 = "abcdtfgh";
+    String str12 = "pbcdppp";
+    String str13 = "ab";
+    System.out.println(str11.regionMatches(1, str12, 1, 3));
+    System.out.println(str11.startsWith(str13));
+    System.out.println(str11.endsWith(str13));
+    System.out.println();
+    
+    System.out.println("Point 17");
+    str13 = "This is hashcode";
+    System.out.println(str13);
+    System.out.println(str13.hashCode());
+    System.out.println();
+    
+    System.out.println("Point 18");
+    str13 = "This is hardcore";
+    System.out.println(str13.indexOf('i'));
+    System.out.println(str13.indexOf('r', 11));
+    System.out.println(str13.lastIndexOf('i'));
+    System.out.println(str13.lastIndexOf('r', 12));
+    System.out.println();
+    
+    System.out.println("Point 19");
+    str12 = "To be or not to be";
+    str13 = "be";
+    System.out.println(str12.indexOf(str13));
+    System.out.println(str12.indexOf(str13, 6));
+    System.out.println(str12.lastIndexOf(str13));
+    System.out.println(str12.lastIndexOf(str13, 10));
+    System.out.println();
+    
+    System.out.println("Point 20");
+    System.out.println(str12.substring(9));
+    System.out.println(str12.substring(3, 12));
+    System.out.println();
+    
+    System.out.println("Point 21");
+    CharSequence str14 = str12.subSequence(2, 11);
+    System.out.println(str14);
+    System.out.println();
+    
+    System.out.println("Point 22");
+    System.out.println("This".concat(" is").concat(" concatenation"));
+    System.out.println("anna".replace('n', 'l'));
+    System.out.println();
+    
+    System.out.println("Point 23");
+    CharSequence str15 = "Condor";
+    str12 = "Condor is a big bird";
+    System.out.println(str12.contains(str15));
+    System.out.println();
+    
 }
 }
